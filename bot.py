@@ -269,7 +269,7 @@ def send_draft_to_discord(draft_id, tweet, reply_text, ping=False):
 
     payload = {"embeds": [embed]}
     if ping:
-        payload["content"] = "@605286827682693161 New drafts ready for review!"
+        payload["content"] = "<@605286827682693161> New drafts ready for review!"
 
     resp = requests.post(DISCORD_WEBHOOK_URL, json=payload)
     if resp.status_code not in (200, 204):
